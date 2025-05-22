@@ -1,0 +1,193 @@
+:root {
+  --primary: #2C3E50;
+  --accent: #D4AF37;
+  --bg-light: #F4F4F4;
+  --text-dark: #1A1A1A;
+  --text-muted: #95A5A6;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background: var(--text-dark);
+  color: var(--bg-light);
+}
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  background: var(--primary);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+section {
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary);
+}
+
+.centered {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+input, button {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--accent);
+  color: var(--text-dark);
+}
+
+.categories {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.categories button {
+  background: var(--accent);
+  color: var(--text-dark);
+  margin: 0.3rem;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+  padding-top: 1rem;
+}
+
+.menu-card {
+  background: white;
+  border: 2px solid var(--accent);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cart-wrapper {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#cartList {
+  list-style: none;
+  padding: 0;
+}
+
+#cartList li {
+  margin: 0.5rem 0;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  margin: 10% auto;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.contact-form {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.7rem;
+  background: var(--accent);
+  color: var(--text-dark);
+  border-radius: 50%;
+  display: none;
+  font-size: 1.2rem;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-light);
+  color: var(--primary);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
